@@ -21,7 +21,6 @@ public class PaymentController {
         CommonResult<Object> commonResult = CommonResult.get();
         int i = paymentService.create(payment);
         log.info("插入结果:" + i);
-        System.out.println("2345");
         if(i <= 0){
             return commonResult.setCode(444).setMessage("调用失败");
         }

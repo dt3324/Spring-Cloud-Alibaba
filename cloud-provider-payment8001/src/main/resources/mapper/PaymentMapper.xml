@@ -5,7 +5,7 @@
 <!--映射dao接口-->
 <mapper namespace="com.danny.springcloud.dao.PaymentDao">
     <insert id="create" parameterType="Payment" useGeneratedKeys="true" keyProperty="id">
-        insert int payment(serial) value (#serial)
+        insert into payment(serial) value (#{serial})
     </insert>
 
     <select id="getPaymentById" parameterType="Long" resultMap="StudentResult">
