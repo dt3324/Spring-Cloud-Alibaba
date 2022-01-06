@@ -1,0 +1,20 @@
+<?xml version="1.0" encoding="UTF-8" ?>
+<!DOCTYPE mapper
+        PUBLIC "-//mybatis.org//DTD Mapper 3.0//EN"
+        "http://mybatis.org/dtd/mybatis-3-mapper.dtd">
+<!--映射dao接口-->
+<mapper namespace="com.danny.springcloud.dao.PaymentDao">
+    <insert id="create" parameterType="Payment" useGeneratedKeys="true" keyProperty="id">
+        insert int payment(serial) value (#serial)
+    </insert>
+
+    <select id="getPaymentById" parameterType="Long" resultMap="StudentResult">
+        select * from payment where id=#{id}
+    </select>
+
+    <resultMap type="Payment" id="StudentResult">
+<!--   数据库:column  实体:property   -->
+        <id property="id" column="id"/>
+        <result property="serial" column="serial"/>
+    </resultMap>
+</mapper>
