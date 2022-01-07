@@ -1,0 +1,9 @@
+server:
+  port: 8005
+
+spring:
+  application:
+    name: cloud-provider-zookeeper-order
+  cloud:
+    zookeeper:
+      connect-string: localhost:2181

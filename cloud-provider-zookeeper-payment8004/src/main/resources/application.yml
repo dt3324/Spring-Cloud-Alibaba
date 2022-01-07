@@ -1,0 +1,10 @@
+server:
+  port: 8004
+
+spring:
+  application:
+    #服务名称 注册中心中的名称
+    name: cloud-prowider-payment-server
+  cloud:
+    zookeeper:
+      connect-string: localhost:2181
