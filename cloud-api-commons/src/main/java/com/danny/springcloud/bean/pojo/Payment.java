@@ -1,4 +1,4 @@
-package com.danny.springcloud.entities;
+package com.danny.springcloud.bean.pojo;
 
 import lombok.AllArgsConstructor;
 import lombok.Data;

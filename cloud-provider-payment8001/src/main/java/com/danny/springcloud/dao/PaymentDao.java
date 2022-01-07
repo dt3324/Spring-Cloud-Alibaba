@@ -1,8 +1,9 @@
 package com.danny.springcloud.dao;
 
-import com.danny.springcloud.entities.Payment;
 import org.apache.ibatis.annotations.Mapper;
 import org.apache.ibatis.annotations.Param;
+
+import com.danny.springcloud.bean.pojo.Payment;
 
 @Mapper
 public interface PaymentDao {

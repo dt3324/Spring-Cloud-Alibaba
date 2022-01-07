@@ -1,16 +1,16 @@
 server:
   port: 80
 
-spring:
-  application:
-    name: cloud-orser-server
-  datasource:
-    type: com.alibaba.druid.pool.DruidDataSource
-    driver-class-name: com.mysql.cj.jdbc.Driver
-    url: jdbc:mysql://localhost:3306/springcloudalibaba?serverTimezone=Asia/Shanghai&useUnicode=true&characterEncoding=utf-8&useSSL=false
-    username: root
-    password: 123456
-
-mybatis:
-  mapper-locations: classpath:mapper/*.xml
-  type-aliases-package: com.danny.springcloud.entities
+#spring:
+#  application:
+#    name: cloud-orser-server
+#  datasource:
+#    type: com.alibaba.druid.pool.DruidDataSource
+#    driver-class-name: com.mysql.cj.jdbc.Driver
+#    url: jdbc:mysql://localhost:3306/springcloudalibaba?serverTimezone=Asia/Shanghai&useUnicode=true&characterEncoding=utf-8&useSSL=false
+#    username: root
+#    password: Zgys123@123
+#
+#mybatis:
+#  mapper-locations: classpath:mapper/*.xml
+#  type-aliases-package: com.danny.springcloud.entities

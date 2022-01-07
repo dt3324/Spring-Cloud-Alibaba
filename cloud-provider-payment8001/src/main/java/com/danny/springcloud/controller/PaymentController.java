@@ -1,10 +1,13 @@
 package com.danny.springcloud.controller;
 
-import com.danny.springcloud.entities.CommonResult;
-import com.danny.springcloud.entities.Payment;
+import com.danny.springcloud.bean.vo.PaymentVo;
 import com.danny.springcloud.service.PaymentService;
 import lombok.extern.slf4j.Slf4j;
+import org.springframework.beans.BeanUtils;
 import org.springframework.web.bind.annotation.*;
+
+import com.danny.springcloud.bean.CommonResult;
+import com.danny.springcloud.bean.pojo.Payment;
 
 @RestController
 @Slf4j
@@ -27,10 +30,13 @@ public class PaymentController {
         return commonResult.setData(i);
     }
     @GetMapping("/get/{id}")
-    public CommonResult<Payment> findById(@PathVariable("id") Long id){
-        CommonResult<Payment> commonResult = new CommonResult<>();
+    public CommonResult<PaymentVo> findById(@PathVariable("id") Long id){
+        CommonResult<PaymentVo> commonResult = new CommonResult<>();
         Payment payment = paymentService.getPaymentById(id);
         log.info("查询id："+ id + ", 的结果->{}", payment);
-        return commonResult.setData(payment);
+        PaymentVo paymentVo = new PaymentVo();
+        if(payment != null)
+        BeanUtils.copyProperties(payment, paymentVo);
+        return commonResult.setData(paymentVo);
     }
 }

@@ -1,4 +1,4 @@
-package com.danny.springcloud.entities;
+package com.danny.springcloud.bean;
 
 import lombok.AllArgsConstructor;
 import lombok.Data;
